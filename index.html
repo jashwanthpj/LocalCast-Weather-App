@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+    LocalCast: A Weather Forecast Application
+    Author: Jashwanth Podduturi
+    Date: 2024
+    Description: This HTML page serves as the structure for the LocalCast application, where users can search for current weather conditions by city.
+    -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="copyright" content="Copyright © 2024 Jashwanth Podduturi">
+    <link rel="stylesheet" href="LocalcastStyle.css">
+    <title>LocalCast</title>
+</head>
+<body>
+    <!-- Main container for the application -->
+    <div class="container">
+        <!-- Form for entering city name -->
+        <div class="form">
+            <form class="localcast" id="localcast">
+                <div class="inputs">
+                    <!-- Input field for city name -->
+                    <input type="text" placeholder="search for city" class="place" id="place1" name="place">
+                    <!-- Submit button for search -->
+                    <input type="submit" id="submit" class="submit" value="search">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Section to display the search results -->
+    <div class="result" id="result">
+        <div class="content">
+            <!-- Content for weather results will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <!-- Footer with copyright information -->
+    <footer>
+        <small>© 2024 Jashwanth Podduturi</small>
+    </footer>
+
+    <!-- JavaScript file for handling form submission and API interaction -->
+    <script src="scripts.js"></script>
+</body>
+</html>
+
