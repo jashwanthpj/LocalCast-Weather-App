@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     margin: 0;
+    overflow-x: hidden;
 }
 
 body {
@@ -9,16 +10,14 @@ body {
     margin: 0;
     padding: 0;
     background-image: url(https://images.unsplash.com/photo-1502252430442-aac78f397426?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    /* min-height: 100vh; */
     overflow: hidden;
 }
 
 html::before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -55,8 +54,8 @@ html::before {
 .result {
     padding: 20px;
     width: 500px;
-    margin: auto;   
-    /* margin: 50px auto 20px auto; */
+    /* margin: auto;    */
+    margin: 10px auto 20px auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,7 +86,10 @@ img {
 }
 
 footer {
-    margin-top: 120px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* margin-top: 120px; */
     /* margin: 0; */
     padding: 10px 0;
     background-color: #f0f0f0;
@@ -95,9 +97,16 @@ footer {
 }
 
 /* Responsive Styles */
+@media (max-width: 1024px) {
+    .result {
+        margin: 50px auto;
+        max-width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
-        margin: 50px auto;
+        margin: 40px auto;
     }
 
     .place {
@@ -110,6 +119,7 @@ footer {
     }
 
     .result {
+        margin: 50px auto;
         max-width: 90%;
     }
 
@@ -130,9 +140,57 @@ footer {
         font-size: 14px;
     }
 
+    .place {
+        max-width: 50%;
+    }
+
+    .inputs{
+        display: flex;
+        justify-content: center;
+    }
+
     .result {
-        max-width: 100%;
-        margin: 10px auto;
+        margin: 50px auto;
+        max-width: 70%;
+    }
+
+    img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .content h1 {
+        font-size: 18px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 390px) {
+    .container {
+        margin: 25px auto;
+    }
+
+    .submit {
+        margin-left: 5px;
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .place {
+        max-width: 50%;
+    }
+
+    .inputs{
+        display: flex;
+        justify-content: center;
+    }
+
+    .result {
+        margin: 25px auto;
+        max-width: 70%;
     }
 
     img {
