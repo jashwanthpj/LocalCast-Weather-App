@@ -89,11 +89,30 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    /* margin-top: 120px; */
-    /* margin: 0; */
     padding: 10px 0;
-    background-color: #f0f0f0;
+    background-color: #f1f1f1;
     text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-content small {
+    margin-right: 10px;
+}
+
+.social-icons a {
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.social-icons i {
+    font-size: 24px;
+    color: black;
 }
 
 /* Responsive Styles */
